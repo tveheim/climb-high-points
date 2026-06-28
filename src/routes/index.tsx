@@ -12,48 +12,48 @@ export const Route = createFileRoute("/")({
   component: Leaderboard,
 });
 
-type Player = { rank: number; name: string; points: number; change: number };
+type Player = { rank: number; name: string; points: number; change: number; exact: number };
 
 const PLAYERS: Player[] = [
-  { rank: 1, name: "tROnd d", points: 95, change: 0 },
-  { rank: 2, name: "Einar Eikeland", points: 93, change: 6 },
-  { rank: 3, name: "Benjamin", points: 93, change: -1 },
-  { rank: 4, name: "Peter Nygård", points: 92, change: -1 },
-  { rank: 5, name: "Alexander", points: 92, change: 5 },
-  { rank: 5, name: "Geir Myhre", points: 92, change: 5 },
-  { rank: 7, name: "Mats Knudsen", points: 91, change: 0 },
-  { rank: 8, name: "Bjørn Inge", points: 91, change: -4 },
-  { rank: 9, name: "Christopher", points: 90, change: -4 },
-  { rank: 10, name: "Hilde Berg", points: 90, change: -4 },
-  { rank: 10, name: "Andreas Veheim", points: 90, change: 4 },
-  { rank: 12, name: "Lars Kvalbein", points: 87, change: -4 },
-  { rank: 13, name: "Frank Erik", points: 87, change: 1 },
-  { rank: 14, name: "Irene", points: 86, change: 7 },
-  { rank: 14, name: "Kristoffer Lie", points: 86, change: -2 },
-  { rank: 14, name: "Megan", points: 86, change: 5 },
-  { rank: 17, name: "Joacim T", points: 86, change: 1 },
-  { rank: 17, name: "Kjersti Lønningdal", points: 86, change: 6 },
-  { rank: 19, name: "Darth Vader", points: 85, change: -6 },
-  { rank: 20, name: "Siv Merete Fjeldseth", points: 85, change: -6 },
-  { rank: 20, name: "Oddgeir", points: 85, change: -6 },
-  { rank: 22, name: "Andreas Enehaug", points: 84, change: -2 },
-  { rank: 23, name: "Marit H", points: 84, change: -1 },
-  { rank: 24, name: "Thomas Veheim", points: 82, change: 1 },
-  { rank: 25, name: "Soccer-Hauken", points: 81, change: -2 },
-  { rank: 26, name: "May Linn Berg", points: 79, change: -1 },
-  { rank: 27, name: "Jørgen Ramsdal", points: 79, change: 0 },
-  { rank: 28, name: "Øyvind", points: 78, change: 3 },
-  { rank: 29, name: "TroND M", points: 77, change: 2 },
-  { rank: 29, name: "Fredrik Fahlstrøm", points: 77, change: -1 },
-  { rank: 31, name: "Lisbeth", points: 76, change: -1 },
-  { rank: 32, name: "Kenneth Balsnes", points: 72, change: 1 },
-  { rank: 33, name: "Fahlstrom", points: 71, change: -4 },
-  { rank: 33, name: "Jonathan", points: 71, change: 3 },
-  { rank: 35, name: "Rune Rafteseth", points: 69, change: 0 },
-  { rank: 36, name: "Tore Nesheim", points: 69, change: 1 },
-  { rank: 37, name: "Torkild Hjelmtveit", points: 68, change: -3 },
-  { rank: 38, name: "William", points: 54, change: 1 },
-  { rank: 39, name: "Thomas Karlsnes", points: 53, change: -1 },
+  { rank: 1, name: "Alexander", points: 105, change: 4, exact: 7 },
+  { rank: 2, name: "Einar Eikeland", points: 104, change: 0, exact: 10 },
+  { rank: 3, name: "tROnd d", points: 103, change: -2, exact: 9 },
+  { rank: 4, name: "Geir Myhre", points: 101, change: 1, exact: 7 },
+  { rank: 5, name: "Peter Nygård", points: 100, change: -1, exact: 10 },
+  { rank: 5, name: "Christopher", points: 100, change: 4, exact: 10 },
+  { rank: 7, name: "Andreas Veheim", points: 100, change: 3, exact: 6 },
+  { rank: 8, name: "Mats Knudsen", points: 99, change: -1, exact: 9 },
+  { rank: 9, name: "Bjørn Inge", points: 99, change: -1, exact: 7 },
+  { rank: 10, name: "Hilde Berg", points: 98, change: 0, exact: 6 },
+  { rank: 11, name: "Joacim T", points: 98, change: 6, exact: 4 },
+  { rank: 12, name: "Benjamin", points: 97, change: -9, exact: 7 },
+  { rank: 13, name: "Andreas Enehaug", points: 96, change: 9, exact: 8 },
+  { rank: 14, name: "Kjersti Lønningdal", points: 96, change: 3, exact: 4 },
+  { rank: 15, name: "Irene", points: 95, change: -1, exact: 9 },
+  { rank: 15, name: "Megan", points: 95, change: -1, exact: 9 },
+  { rank: 17, name: "Marit H", points: 95, change: 6, exact: 5 },
+  { rank: 18, name: "Darth Vader", points: 94, change: 1, exact: 8 },
+  { rank: 18, name: "Lars Kvalbein", points: 94, change: -6, exact: 8 },
+  { rank: 18, name: "Kristoffer Lie", points: 94, change: -4, exact: 8 },
+  { rank: 21, name: "Frank Erik", points: 94, change: -8, exact: 6 },
+  { rank: 22, name: "Siv Merete Fjeldseth", points: 93, change: -2, exact: 5 },
+  { rank: 23, name: "Oddgeir", points: 92, change: -3, exact: 6 },
+  { rank: 24, name: "Soccer-Hauken", points: 92, change: 1, exact: 4 },
+  { rank: 25, name: "Thomas Veheim", points: 90, change: -1, exact: 8 },
+  { rank: 26, name: "Fredrik Fahlstrøm", points: 90, change: 3, exact: 4 },
+  { rank: 27, name: "May Linn Berg", points: 89, change: -1, exact: 7 },
+  { rank: 28, name: "TroND M", points: 87, change: 1, exact: 5 },
+  { rank: 29, name: "Øyvind", points: 86, change: -1, exact: 4 },
+  { rank: 30, name: "Jørgen Ramsdal", points: 85, change: -3, exact: 5 },
+  { rank: 31, name: "Kenneth Balsnes", points: 84, change: 1, exact: 8 },
+  { rank: 32, name: "Lisbeth", points: 82, change: -1, exact: 6 },
+  { rank: 33, name: "Jonathan", points: 77, change: 0, exact: 5 },
+  { rank: 34, name: "Rune Rafteseth", points: 76, change: 1, exact: 8 },
+  { rank: 35, name: "Tore Nesheim", points: 75, change: 1, exact: 3 },
+  { rank: 36, name: "Fahlstrom", points: 71, change: -3, exact: 5 },
+  { rank: 37, name: "Torkild Hjelmtveit", points: 68, change: 0, exact: 2 },
+  { rank: 38, name: "Thomas Karlsnes", points: 64, change: 1, exact: 4 },
+  { rank: 39, name: "William", points: 60, change: -1, exact: 2 },
 ];
 
 const POT = 10000; // kr — visningsverdi
@@ -224,7 +224,7 @@ function Row({
   highlight: "first" | "second" | "bottom" | "none";
   isAbsoluteLast: boolean;
 }) {
-  const base = "grid grid-cols-[44px_1fr_auto] items-center gap-3 rounded-2xl px-3 py-3 transition-colors";
+  const base = "grid grid-cols-[44px_1fr_auto_auto] items-center gap-3 rounded-2xl px-3 py-3 transition-colors";
   const styles: Record<typeof highlight, string> = {
     first: "border border-gold/40 bg-gold/[0.08]",
     second: "border border-silver/30 bg-silver/[0.06]",
@@ -270,6 +270,12 @@ function Row({
           <span className="truncate">{player.name}</span>
         </div>
         <ChangeBadge change={player.change} />
+      </div>
+
+      {/* Exact */}
+      <div className="text-right">
+        <div className="font-display text-2xl font-bold tabular-nums leading-none">{player.exact}</div>
+        <div className="mt-1 text-[10px] font-mono uppercase tracking-widest text-muted-foreground">treff</div>
       </div>
 
       {/* Points */}
