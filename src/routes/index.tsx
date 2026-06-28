@@ -274,11 +274,11 @@ function Row({
 
       {/* Points + exact */}
       <div className="text-right">
-        <div className="flex items-baseline justify-end gap-1.5">
-          <span className="font-display text-2xl font-bold tabular-nums leading-none">{player.points}</span>
-          <span className="font-mono text-sm font-bold tabular-nums text-gold">({player.exact})</span>
+        <div className="font-display text-2xl font-bold tabular-nums leading-none">{player.points}</div>
+        <div className="mt-1 flex items-center justify-end gap-1">
+          <span className="text-[10px] font-mono uppercase tracking-widest text-muted-foreground">poeng</span>
+          <span className="text-[11px] font-mono font-bold text-gold">({player.exact})</span>
         </div>
-        <div className="mt-1 text-[10px] font-mono uppercase tracking-widest text-muted-foreground">poeng</div>
       </div>
     </div>
   );
