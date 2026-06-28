@@ -224,7 +224,7 @@ function Row({
   highlight: "first" | "second" | "bottom" | "none";
   isAbsoluteLast: boolean;
 }) {
-  const base = "grid grid-cols-[44px_1fr_auto_auto] items-center gap-3 rounded-2xl px-3 py-3 transition-colors";
+  const base = "grid grid-cols-[44px_1fr_auto] items-center gap-3 rounded-2xl px-3 py-3 transition-colors";
   const styles: Record<typeof highlight, string> = {
     first: "border border-gold/40 bg-gold/[0.08]",
     second: "border border-silver/30 bg-silver/[0.06]",
@@ -272,15 +272,12 @@ function Row({
         <ChangeBadge change={player.change} />
       </div>
 
-      {/* Exact */}
+      {/* Points + exact */}
       <div className="text-right">
-        <div className="font-display text-2xl font-bold tabular-nums leading-none">{player.exact}</div>
-        <div className="mt-1 text-[10px] font-mono uppercase tracking-widest text-muted-foreground">treff</div>
-      </div>
-
-      {/* Points */}
-      <div className="text-right">
-        <div className="font-display text-2xl font-bold tabular-nums leading-none">{player.points}</div>
+        <div className="flex items-baseline justify-end gap-1.5">
+          <span className="font-display text-2xl font-bold tabular-nums leading-none">{player.points}</span>
+          <span className="font-mono text-sm font-bold tabular-nums text-gold">({player.exact})</span>
+        </div>
         <div className="mt-1 text-[10px] font-mono uppercase tracking-widest text-muted-foreground">poeng</div>
       </div>
     </div>
