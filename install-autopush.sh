@@ -12,15 +12,20 @@ FILE="$REPO/src/routes/index.tsx"
 
 echo "[autopush] Watching $FILE for changes..."
 
+clear_stale_locks() {
+  find "$REPO/.git" -name "*.lock" -mmin +5 -print -delete 2>/dev/null
+}
+
 fswatch -o "$FILE" | while read; do
   sleep 1
   cd "$REPO"
-  if git diff --quiet src/routes/index.tsx; then
+  clear_stale_locks
+  if git diff --quiet && git diff --cached --quiet && [ -z "$(git status --porcelain)" ]; then
     echo "[autopush] No changes detected."
     continue
   fi
   DATO=$(date +%Y-%m-%d)
-  git add src/routes/index.tsx
+  git add -A
   git commit -m "Update standings $DATO (auto)"
   git push origin main
   echo "[autopush] Pushed at $(date)"
