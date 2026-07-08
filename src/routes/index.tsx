@@ -508,6 +508,10 @@ const HISTORY: Snapshot[] = [
       { name: "Thomas Karlsnes", rank: 39, points: 76 },
     ],
   },
+  {
+    date: "2026-07-08",
+    players: PLAYERS.map(({ name, rank, points }) => ({ name, rank, points })),
+  },
 ];
 
 const POT = 10000; // kr — visningsverdi
@@ -529,7 +533,7 @@ function Leaderboard() {
         <header className="px-5 pt-8 pb-6">
           <div className="mx-auto max-w-2xl">
             <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-[0.2em] text-muted-foreground">
-              <span>7. juli 2026</span>
+              <span>8. juli 2026</span>
               <span className="flex items-center gap-1.5">
                 <span className="inline-block size-1.5 rounded-full bg-up animate-pulse" />
                 Live
