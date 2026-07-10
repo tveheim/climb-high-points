@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "Bash(git -C ~/VM-Tipping status)",
+      "Bash(git -C ~/VM-Tipping rev-parse HEAD origin/main)",
+      "Bash(git -C ~/VM-Tipping log --oneline -5)",
+      "Bash(find ~/VM-Tipping -iname \"*autopush*\" 2>/dev/null; echo \"---\"; find ~ -maxdepth 2 -iname \"*autopush*\" 2>/dev/null; echo \"---\"; find ~/VM-Tipping -iname \"CLAUDE.md\" 2>/dev/null)",
+      "Bash(launchctl list *)",
+      "Bash(launchctl unload *)",
+      "Bash(launchctl load *)"
+    ]
+  }
+}
