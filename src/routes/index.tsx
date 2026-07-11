@@ -554,6 +554,50 @@ const HISTORY: Snapshot[] = [
   },
   {
     date: "2026-07-10",
+    players: [
+      { name: "Mats Knudsen", rank: 1, points: 139 },
+      { name: "Kjersti Lønningdal", rank: 2, points: 139 },
+      { name: "Andreas Enehaug", rank: 3, points: 138 },
+      { name: "Einar Eikeland", rank: 4, points: 138 },
+      { name: "Irene", rank: 4, points: 138 },
+      { name: "Frank Erik", rank: 4, points: 138 },
+      { name: "Oddgeir", rank: 7, points: 138 },
+      { name: "Marit H", rank: 7, points: 138 },
+      { name: "Alexander", rank: 9, points: 138 },
+      { name: "tROnd d", rank: 10, points: 136 },
+      { name: "Joacim T", rank: 11, points: 136 },
+      { name: "Benjamin", rank: 12, points: 135 },
+      { name: "Christopher", rank: 13, points: 134 },
+      { name: "Peter Nygård", rank: 14, points: 131 },
+      { name: "TroND M", rank: 15, points: 131 },
+      { name: "Kristoffer Lie", rank: 16, points: 130 },
+      { name: "Geir", rank: 16, points: 130 },
+      { name: "Andreas Veheim", rank: 18, points: 130 },
+      { name: "Fredrik Fahlstrøm", rank: 19, points: 128 },
+      { name: "Hilde Berg", rank: 20, points: 127 },
+      { name: "Soccer-Hauken", rank: 21, points: 127 },
+      { name: "May Linn Berg", rank: 22, points: 126 },
+      { name: "Megan", rank: 23, points: 123 },
+      { name: "Øyvind", rank: 24, points: 123 },
+      { name: "Thomas Veheim", rank: 25, points: 122 },
+      { name: "Siv Merete Fjeldseth", rank: 26, points: 122 },
+      { name: "Lars Kvalbein", rank: 27, points: 118 },
+      { name: "Jonathan", rank: 28, points: 116 },
+      { name: "Kenneth Balsnes", rank: 29, points: 114 },
+      { name: "Jørgen Ramsdal", rank: 30, points: 113 },
+      { name: "Lisbeth", rank: 31, points: 113 },
+      { name: "Darth Vader", rank: 32, points: 112 },
+      { name: "Tore Nesheim", rank: 33, points: 104 },
+      { name: "Bjørn Inge", rank: 34, points: 99 },
+      { name: "William", rank: 35, points: 92 },
+      { name: "Torkild Hjelmtveit", rank: 36, points: 84 },
+      { name: "Thomas Karlsnes", rank: 37, points: 80 },
+      { name: "Fahlstrom", rank: 38, points: 79 },
+      { name: "Rune Rafteseth", rank: 39, points: 76 },
+    ],
+  },
+  {
+    date: "2026-07-11",
     players: PLAYERS.map(({ name, rank, points }) => ({ name, rank, points })),
   },
 ];
@@ -577,7 +621,7 @@ function Leaderboard() {
         <header className="px-5 pt-8 pb-6">
           <div className="mx-auto max-w-2xl">
             <div className="flex items-center justify-between text-[11px] font-mono uppercase tracking-[0.2em] text-muted-foreground">
-              <span>10. juli 2026</span>
+              <span>11. juli 2026</span>
               <span className="flex items-center gap-1.5">
                 <span className="inline-block size-1.5 rounded-full bg-up animate-pulse" />
                 Live
