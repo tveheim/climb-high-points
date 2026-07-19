@@ -742,6 +742,8 @@ function Leaderboard() {
 
   const topClimber = [...PLAYERS].sort((a, b) => b.change - a.change)[0];
   const topFaller = [...PLAYERS].sort((a, b) => a.change - b.change)[0];
+  const hasClimbers = topClimber.change > 0;
+  const hasFallers = topFaller.change < 0;
   const lastRank = Math.max(...PLAYERS.map((p) => p.rank));
   const bottomRanks = Array.from(new Set([...PLAYERS].map((p) => p.rank))).sort((a, b) => b - a).slice(0, 3);
   const bottomSet = new Set(bottomRanks);
@@ -793,20 +795,30 @@ function Leaderboard() {
             </div>
 
             {/* Momentum */}
-            <div className="grid grid-cols-2 gap-3">
-              <MomentumCard
-                emoji="🚀"
-                label="Klatrer mest"
-                player={topClimber}
-                tone="up"
-              />
-              <MomentumCard
-                emoji="🪂"
-                label="Faller mest"
-                player={topFaller}
-                tone="down"
-              />
-            </div>
+            {(hasClimbers || hasFallers) ? (
+              <div className="grid grid-cols-2 gap-3">
+                {hasClimbers && (
+                  <MomentumCard
+                    emoji="🚀"
+                    label="Klatrer mest"
+                    player={topClimber}
+                    tone="up"
+                  />
+                )}
+                {hasFallers && (
+                  <MomentumCard
+                    emoji="🪂"
+                    label="Faller mest"
+                    player={topFaller}
+                    tone="down"
+                  />
+                )}
+              </div>
+            ) : (
+              <div className="rounded-2xl border border-border bg-card p-4 shadow-card text-center text-sm text-muted-foreground font-mono">
+                😴 Stille runde — ingen plassendring
+              </div>
+            )}
           </div>
         </section>
 
