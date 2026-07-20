@@ -778,7 +778,7 @@ const HISTORY: Snapshot[] = [
   },
 ];
 
-const POT = 10000; // kr — visningsverdi
+const POT = 5850; // kr — visningsverdi
 const fmtKr = (n: number) => new Intl.NumberFormat("nb-NO").format(n) + " kr";
 
 function Leaderboard() {
